@@ -2,11 +2,13 @@ import { ScreenContent } from 'components/ScreenContent';
 import React, { useState, useEffect } from 'react';
 import { Text, View, SafeAreaView, TouchableOpacity  } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { CircuitBoard, Omega } from "lucide-react-native";
+import { useRouter } from 'expo-router';
 
-import './global.css'; 
+import '../global.css'; 
 
 export default function App() {
+  const router = useRouter();
+  
   const [currentTime, setCurrentTime] = useState('');
   const [currentDate, setCurrentDate] = useState('');
 
@@ -29,13 +31,13 @@ export default function App() {
   }, []);
 
   const navegarparaTableScreen = () => {
-    console.log('Navegar para Tabela de Resistência (colocar depois)');
-    // tela da tabela
+    router.push('/table');
+    
   };
 
   const navegarparaResistorCalculator = () => {
-    console.log('Calculadora de Resistores (colocar depois)');
-    // tela da calculadora
+    router.push('/calculator');
+    
   };
 
   return (
@@ -52,20 +54,18 @@ export default function App() {
       </View>
 
       <TouchableOpacity
-        className="flex-row items-center justify-center bg-gray-50 w-4/5 p-5 rounded-lg mb-8 shadow-md mt-110"  
+        className="items-center justify-center bg-gray-50 w-4/5 p-5 rounded-lg mb-8 shadow-md mt-110" 
         onPress={navegarparaTableScreen}
       >
-        <CircuitBoard size={24} color="#4B5563" style={{ marginRight: 16 }} />
         <Text className="text-lg font-semibold text-gray-700"> 
           Tabela de Resistência
         </Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        className="flex-row items-center justify-center bg-gray-50 w-4/5 p-5 rounded-lg mb-5 shadow-md" 
+        className="items-center justify-center bg-gray-50 w-4/5 p-5 rounded-lg mb-5 shadow-md" 
         onPress={navegarparaResistorCalculator}
       >
-        <Omega size={24} color="#4B5563" style={{ marginRight: 16 }} />
         <Text className="text-lg font-semibold text-gray-700"> 
           Resistor
         </Text>
