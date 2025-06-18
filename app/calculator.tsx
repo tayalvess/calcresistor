@@ -5,16 +5,16 @@ import { ArrowLeft } from 'lucide-react-native';
 
 import '../global.css'; 
 
-export default function Table() { 
-  const router = useRouter();
+export default function Calculator() {
+  const router = useRouter(); 
 
   return (
     <SafeAreaView className="flex-1 bg-white items-center justify-center">
       <Stack.Screen
         options={{
-          headerTitle: 'Tabela de Resistores',
-          headerShown: true,
-          headerLeft: () => (
+          headerTitle: 'Calculadora de Resistores',
+          headerShown: true, 
+          headerLeft: () => ( 
             <TouchableOpacity onPress={() => router.back()} className="ml-4">
               <ArrowLeft size={24} color="#4B5563" />
             </TouchableOpacity>
@@ -22,10 +22,10 @@ export default function Table() {
         }}
       />
       <Text className="text-2xl font-bold text-gray-800">
-        Esta é (na vdd vai ser) a tela da Tabela de Resistores!!!!!
+        Esta é a tela da Calculadora de Resistores!!!!!!
       </Text>
       <Text className="text-base text-gray-600 mt-4">
-        Esse é o prototipo de tabela q é preciso criar dps !!!
+        Teste teste teste calculadora !!!
       </Text>
     </SafeAreaView>
   );
