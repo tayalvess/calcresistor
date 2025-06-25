@@ -5,11 +5,11 @@ export const COLORS_DATA = [
     digit: 0,
     multiplier: 1,
     tolerance: null,
-    tempCoef: null, 
+    tempCoef: null,
   },
   {
     name: 'Marrom',
-    color: '#A52A2A',
+    color: '#B45309', 
     digit: 1,
     multiplier: 10,
     tolerance: '±1%',
@@ -36,7 +36,7 @@ export const COLORS_DATA = [
     color: '#FFFF00',
     digit: 4,
     multiplier: 10000,
-    tolerance: '±5%', 
+    tolerance: '±5%',
     tempCoef: '25 PPM/°C',
   },
   {
